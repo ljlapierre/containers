@@ -1,0 +1,7 @@
+FROM docker.io/library/ubuntu:latest
+ADD https://software.sonicwall.com/NetExtender/NetExtender-linux-amd64-10.3.0-21.deb /tmp/
+RUN <<EOF
+env DEBIAN_FRONTEND=noninteractive apt-get install -y TODO SOME PREREQUISITE SOFTWARE
+env DEBIAN_FRONTEND=noninteractive apt-get install -y /tmp/NetExtender-linux-amd64-10.3.0-21.deb
+EOF
+ENTRYPOINT TODO
