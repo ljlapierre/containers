@@ -4,4 +4,6 @@ Download links & upstream documentation here: https://proton.me/support/proton-m
 
 ### Usage
 
+```
 ./run.sh /path/to/backup/directory
+```
