@@ -6,8 +6,12 @@ if [ "$(id -u)" -eq 0 ]; then
 fi
 sudo podman build -qf Containerfile -t sonicwall-netextender
 sudo podman container run \
-    --privileged \
-    --init \
     --net host \
-    --systemd always \
     --name sonicwall-netextender sonicwall-netextender
+
+sudo podman exec -it sonicwall-netextender /bin/bash
+
+    # --privileged \
+    # -d \
+    # --init \
+    # --systemd always \
