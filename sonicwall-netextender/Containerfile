@@ -10,4 +10,6 @@ DEBIAN_FRONTEND=noninteractive apt-get clean
 rm -f /tmp/NetExtender.deb
 EOF
 # ENTRYPOINT /lib/systemd/systemd
-ENTRYPOINT /bin/bash
+# ENTRYPOINT /bin/bash
+ENV DISPLAY
+ENTRYPOINT /usr/local/netextender/NetExtender
