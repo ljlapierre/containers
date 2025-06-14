@@ -5,7 +5,5 @@ if [ -z "${1}" ]; then
     exit 1
 fi
 podman build -qf Containerfile -t proton-mail-export-cli
-podman container run --name proton-mail-export-cli -iv "${1}:/backup" proton-mail-export-cli
-podman container rm -f proton-mail-export-cli
-podman image rm proton-mail-export-cli
-podman image prune -af --external
+podman container run --rmi --name proton-mail-export-cli -iv "${1}:/backup" proton-mail-export-cli
+podman image prune -af

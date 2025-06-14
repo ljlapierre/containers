@@ -1,4 +1,4 @@
 FROM docker.io/library/ubuntu:latest
-ADD https://proton.me/download/export-tool/proton-mail-export-cli-linux_x86_64.tar.gz /tmp/
+ADD https://proton.me/download/export-tool/proton-mail-export-cli-linux_x86_64.tar.gz /tmp/proton-mail-export-cli-linux_x86_64.tar.gz
 RUN tar xzf /tmp/proton-mail-export-cli-linux_x86_64.tar.gz -C /opt && rm -f /tmp/proton-mail-export-cli-linux_x86_64.tar.gz
 ENTRYPOINT /opt/proton-mail-export-cli
